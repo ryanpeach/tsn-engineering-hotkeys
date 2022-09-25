@@ -21,57 +21,57 @@ def main():
 
             # Energy Coolant Commands
             case ["b", energy, coolant]:
-                STATE.beam(energy, coolant)
+                STATE.set_beams(energy, coolant)
             case ["t", energy, coolant]:
-                STATE.torpedo(energy, coolant)
+                STATE.set_torpedos(energy, coolant)
             case ["s", energy, coolant]:
-                STATE.sensors(energy, coolant)
+                STATE.set_sensors(energy, coolant)
             case ["m", energy, coolant]:
-                STATE.maneuver(energy, coolant)
+                STATE.set_maneuver(energy, coolant)
             case ["i", energy, coolant]:
-                STATE.impulse(energy, coolant)
+                STATE.set_impulse(energy, coolant)
             case ["w", energy, coolant]:
-                STATE.warp(energy, coolant)
+                STATE.set_warp(energy, coolant)
             case ["f", energy, coolant]:
-                STATE.front_shields(energy, coolant)
+                STATE.set_front_shields(energy, coolant)
             case ["r", energy, coolant]:
-                STATE.rear_shields(energy, coolant)
+                STATE.set_rear_shields(energy, coolant)
 
             # Energy Commands
             case ["be", energy]:
-                STATE.beam(energy, None)
+                STATE.set_beams(energy, None)
             case ["te", energy]:
-                STATE.torpedo(energy, None)
+                STATE.set_torpedos(energy, None)
             case ["se", energy]:
-                STATE.sensors(energy, None)
+                STATE.set_sensors(energy, None)
             case ["me", energy]:
-                STATE.maneuver(energy, None)
+                STATE.set_maneuver(energy, None)
             case ["ie", energy]:
-                STATE.impulse(energy, None)
+                STATE.set_impulse(energy, None)
             case ["we", energy]:
-                STATE.warp(energy, None)
+                STATE.set_warp(energy, None)
             case ["fe", energy]:
-                STATE.front_shields(energy, None)
+                STATE.set_front_shields(energy, None)
             case ["re", energy]:
-                STATE.rear_shields(energy, None)
+                STATE.set_rear_shields(energy, None)
 
             # Coolant commands
             case ["bc", coolant]:
-                STATE.beam(None, coolant)
+                STATE.set_beams(None, coolant)
             case ["tc", coolant]:
-                STATE.torpedo(None, coolant)
+                STATE.set_torpedos(None, coolant)
             case ["sc", coolant]:
-                STATE.sensors(None, coolant)
+                STATE.set_sensors(None, coolant)
             case ["mc", coolant]:
-                STATE.maneuver(None, coolant)
+                STATE.set_maneuver(None, coolant)
             case ["ic", coolant]:
-                STATE.impulse(None, coolant)
+                STATE.set_impulse(None, coolant)
             case ["wc", coolant]:
-                STATE.warp(None, coolant)
+                STATE.set_warp(None, coolant)
             case ["fc", coolant]:
-                STATE.front_shields(None, coolant)
+                STATE.set_front_shields(None, coolant)
             case ["rc", coolant]:
-                STATE.rear_shields(None, coolant)
+                STATE.set_rear_shields(None, coolant)
 
             # Default
             case _:
