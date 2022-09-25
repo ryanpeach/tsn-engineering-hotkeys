@@ -2,12 +2,16 @@
 
 This a UI that assists an engineer in the game Artemis Bridge Simulator by providing relevant hotkeys for the attack and maneuvering patterns.
 
+![Screenshot](assets/docs/screenshot.PNG)
+
+Place it off to the side of your Artemis window, give it any rig list of any length, and become a more efficient engineer!
+
 # Installation
 
 1. [Clone this repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 2. Install Python and PIP. If you don't know how to do this yet, try [this guide](https://realpython.com/installing-python/).
 3. Install the requirements with `pip install -r requirements.txt`
-4. Run the program with `python -m tsn`
+4. Run the program with `python -m tsn` from the project root folder.
 
 # Use
 
@@ -27,7 +31,9 @@ Open Artemis as an engineer in Windowed mode at 2048x1536 resolution. If this re
 ```json
 {
     "WINDOW_DIMENSIONS": [2048, 1536],
-    "PRESS_INTERVAL_SEC": 0.1
+    "PRESS_INTERVAL_SEC": 0.1,
+    "BUTTON_WIDTH": 400,
+    "IMAGE_DETECTION_CONFIDENCE": 0.5
 }
 ```
 

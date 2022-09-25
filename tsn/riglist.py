@@ -10,7 +10,7 @@ from tsn.settings import load_settings
 class EnergyCoolant:
     """Representing a rig's energy and coolant levels."""
 
-    energy_percent: int = Field(100, gt=0, le=300)
+    energy_percent: int = Field(100, ge=0, le=300)
     coolant_level: int = Field(0, ge=0, le=8)
 
 
@@ -79,6 +79,9 @@ class Rigging:
         # which is not available during unit tests on CICD of other functions.
         import pyautogui
 
+        # Empty the error callback
+        error_callback("")
+
         # Load the settings (allows for dynamic reload)
         settings = load_settings()
 
@@ -91,7 +94,8 @@ class Rigging:
         # and clicking it twice. The first time to activate the window,
         # the second time to focus the engineering console.
         engr = pyautogui.locateOnScreen(
-            str(settings.ENGINEERING_BUTTON), confidence=0.5
+            str(settings.ENGINEERING_BUTTON),
+            confidence=settings.IMAGE_DETECTION_CONFIDENCE,
         )
         if engr is None:
             error_callback("ERROR: Could not find engineering button!")
@@ -147,7 +151,9 @@ class Rigging:
             # we will do this by looking for the vis button
             # and clicking it twice. The first time to activate the window,
             # the second time to focus the vis console.
-            vis = pyautogui.locateOnScreen(str(settings.VIS_BUTTON), confidence=0.5)
+            vis = pyautogui.locateOnScreen(
+                str(settings.VIS_BUTTON), confidence=settings.IMAGE_DETECTION_CONFIDENCE
+            )
             if vis is None:
                 error_callback("ERROR: Could not find vis button!")
                 return
