@@ -38,3 +38,41 @@ Replace the settings as you require.
 # Development
 
 Please install the pre-commit hooks with `pre-commit install` to ensure that your code is formatted correctly when you commit.
+
+## VSCode Settings
+
+Here are some VSCode settings to get you started with local development.
+
+```json
+// .vscode/launch.json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Main",
+            "type": "python",
+            "request": "launch",
+            "program": "tsn/__main__.py",
+            "cwd": "${workspaceRoot}",
+            "env": {"PYTHONPATH": "${workspaceRoot}"},
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
+```
+
+```json
+// .vscode/settings.json
+{
+    "python.testing.pytestArgs": [
+        "tsn"
+    ],
+    "python.testing.cwd": "${workspaceRoot}",
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
+```
