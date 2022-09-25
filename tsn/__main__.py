@@ -1,3 +1,3 @@
-from tsn.ui import window
+from tsn.tui import main
 
-window()
+main()
