@@ -2,3 +2,8 @@ PyQt5
 pyautogui
 pydantic
 pytest
+pre-commit
+black
+pillow
+opencv-python
+mypy

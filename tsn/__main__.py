@@ -1,3 +1,4 @@
-from tsn.tui import main
+from tsn.ui import window
+from tsn.settings import load_settings
 
-main()
+window()

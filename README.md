@@ -4,7 +4,37 @@ This a UI that assists an engineer in the game Artemis Bridge Simulator by provi
 
 # Installation
 
-1. Clone this repository
-2. Install Python
+1. [Clone this repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+2. Install Python and PIP. If you don't know how to do this yet, try [this guide](https://realpython.com/installing-python/).
 3. Install the requirements with `pip install -r requirements.txt`
 4. Run the program with `python -m tsn`
+
+# Use
+
+Copy a rig list as JSON from [this website](https://cattail.nu/artemis/engineersRigbook/index.php) and create a file at the root of this folder called `rig_list.json`.
+
+This tool will always output a list of length 10, however with this tool you can manually make this list as long as you want!
+
+Then run the program with `python -m tsn`.
+
+Open Artemis as an engineer in Windowed mode at 2048x1536 resolution. If this resolution does not work for you, you will need to do the following things:
+
+1. Make a screenshot of the `"ENGINR"` button in the top left corner of the Artemis window at your desired resolution.
+2. Put it in a folder in `assets` with the dimensions of the window as the name. EG: `assets/1920x1080/enginr.png`
+3. Do the same for the `"VIS"` button **from the engineering screen**, and save it under `assets/<FOLDER>/vis.png`. **It's very important that "VIS" is not currently selected when you take the picture.**
+4. Now create a `settings.json` file in the root of the workspace that looks like the following:
+
+```json
+{
+    "WINDOW_DIMENSIONS": [2048, 1536],
+    "PRESS_INTERVAL_SEC": 0.1
+}
+```
+
+Replace the settings as you require.
+
+5. Lastly, please [make a PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) so others don't have to do the same!
+
+# Development
+
+Please install the pre-commit hooks with `pre-commit install` to ensure that your code is formatted correctly when you commit.
