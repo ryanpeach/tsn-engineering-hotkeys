@@ -13,7 +13,7 @@ This a UI that assists an engineer in the game Artemis Bridge Simulator by provi
 
 Copy a rig list as JSON from [this website](https://cattail.nu/artemis/engineersRigbook/index.php) and create a file at the root of this folder called `rig_list.json`.
 
-This tool will always output a list of length 10, however with this tool you can manually make this list as long as you want!
+That tool will always output a list of length 10, however with this tool you can use a list of any length!
 
 Then run the program with `python -m tsn`.
 
