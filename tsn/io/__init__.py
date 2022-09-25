@@ -1,21 +1,8 @@
 from dataclasses import dataclass
 from typing import Optional
 import pyautogui as gui
-
-@dataclass
-class EnergyCoolant:
-    energy: int
-    coolant: int
-
 class StateController:
-    beams: EnergyCoolant
-    torpedoes: EnergyCoolant
-    sensors: EnergyCoolant
-    maneuver: EnergyCoolant
-    impulse: EnergyCoolant
-    warp: EnergyCoolant
-    front_shields: EnergyCoolant
-    rear_shields: EnergyCoolant
+    
 
     def __init__(self):
         self.reset()
