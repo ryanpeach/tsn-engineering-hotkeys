@@ -1,4 +1,5 @@
 # Currently the only dimensions supported (because I use them)
+from pydantic import Field
 from typing import Tuple
 from pydantic.dataclasses import dataclass
 import json
@@ -9,7 +10,8 @@ from pathlib import Path
 class Settings:
     WINDOW_DIMENSIONS: Tuple[int, int]
     PRESS_INTERVAL_SEC: float
-    BUTTON_WIDTH: int = 400
+    BUTTON_WIDTH: int
+    IMAGE_DETECTION_CONFIDENCE: float = Field(..., gt=0.0, lt=1.0)
 
     def __post_init__(self):
         # Derivative settings
@@ -29,23 +31,10 @@ def load_settings():
     with open("settings.json", "r") as f:
         settings = json.load(f)
 
-    if "WINDOW_DIMENSIONS" in settings:
-        WINDOW_DIMENSIONS = tuple(settings["WINDOW_DIMENSIONS"])
-    else:
-        WINDOW_DIMENSIONS = (2048, 1536)
-
-    if "PRESS_INTERVAL_SEC" in settings:
-        PRESS_INTERVAL_SEC = settings["PRESS_INTERVAL_SEC"]
-    else:
-        PRESS_INTERVAL_SEC = 0.1
-
-    if "BUTTON_WIDTH" in settings:
-        BUTTON_WIDTH = settings["BUTTON_WIDTH"]
-    else:
-        BUTTON_WIDTH = 400
-
+    # Here is where you specify your defaults and their overwrites
     return Settings(
-        WINDOW_DIMENSIONS=WINDOW_DIMENSIONS,
-        PRESS_INTERVAL_SEC=PRESS_INTERVAL_SEC,
-        BUTTON_WIDTH=BUTTON_WIDTH,
+        WINDOW_DIMENSIONS=settings.get("WINDOW_DIMENSIONS", (2048, 1536)),
+        PRESS_INTERVAL_SEC=settings.get("PRESS_INTERVAL_SEC", 0.1),
+        BUTTON_WIDTH=settings.get("BUTTON_WIDTH", 400),
+        IMAGE_DETECTION_CONFIDENCE=settings.get("IMAGE_DETECTION_CONFIDENCE", 0.5),
     )
