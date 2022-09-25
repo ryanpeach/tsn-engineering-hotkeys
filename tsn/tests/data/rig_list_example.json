@@ -1,52 +1,382 @@
 [
-	{
-		"rigging": "Default 127/1",
-		"description": "I’m sorry Dave, I’m afraid I can’t do that",
-		"settings": [[127,0],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1]]
-	},
-	{
-		"rigging": "Default 127/1",
-		"description": "It is not necessary to push the key multiple times",
-		"settings": [[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1]]
-	},
-	{
-		"rigging": "Default 127/1",
-		"description": "It is not necessary to push the key multiple times",
-		"settings": [[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1]]
-	},
-	{
-		"rigging": "Default 127/1",
-		"description": "I’m givin’ her all she’s got, Cap’n",
-		"settings": [[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1]]
-	},
-	{
-		"rigging": "Default 127/1",
-		"description": "Overcharge immediately - cool at your leisure",
-		"settings": [[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1]]
-	},
-	{
-		"rigging": "Default 127/1",
-		"description": "Many Bothans died to bring us this information - stupid Bothans",
-		"settings": [[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1]]
-	},
-	{
-		"rigging": "Default 127/1",
-		"description": "Overcharge immediately - cool at your leisure",
-		"settings": [[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1]]
-	},
-	{
-		"rigging": "Default 127/1",
-		"description": "Separates the chicken automatically",
-		"settings": [[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1]]
-	},
-	{
-		"rigging": "Default 127/1",
-		"description": "I’m givin’ her all she’s got, Cap’n",
-		"settings": [[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1]]
-	},
-	{
-		"rigging": "Default 127/1",
-		"description": "Live long and prosper",
-		"settings": [[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1],[127,1]]
-	}
+  {
+    "description": "I\u2019m sorry Dave, I\u2019m afraid I can\u2019t do that",
+    "rigging": "Default 127/1",
+    "settings": [
+      [
+        127,
+        0
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ]
+    ]
+  },
+  {
+    "description": "It is not necessary to push the key multiple times",
+    "rigging": "Default 127/1",
+    "settings": [
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ]
+    ]
+  },
+  {
+    "description": "It is not necessary to push the key multiple times",
+    "rigging": "Default 127/1",
+    "settings": [
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ]
+    ]
+  },
+  {
+    "description": "I\u2019m givin\u2019 her all she\u2019s got, Cap\u2019n",
+    "rigging": "Default 127/1",
+    "settings": [
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ]
+    ]
+  },
+  {
+    "description": "Overcharge immediately - cool at your leisure",
+    "rigging": "Default 127/1",
+    "settings": [
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ]
+    ]
+  },
+  {
+    "description": "Many Bothans died to bring us this information - stupid Bothans",
+    "rigging": "Default 127/1",
+    "settings": [
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ]
+    ]
+  },
+  {
+    "description": "Overcharge immediately - cool at your leisure",
+    "rigging": "Default 127/1",
+    "settings": [
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ]
+    ]
+  },
+  {
+    "description": "Separates the chicken automatically",
+    "rigging": "Default 127/1",
+    "settings": [
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ]
+    ]
+  },
+  {
+    "description": "I\u2019m givin\u2019 her all she\u2019s got, Cap\u2019n",
+    "rigging": "Default 127/1",
+    "settings": [
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ]
+    ]
+  },
+  {
+    "description": "Live long and prosper",
+    "rigging": "Default 127/1",
+    "settings": [
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ],
+      [
+        127,
+        1
+      ]
+    ]
+  }
 ]

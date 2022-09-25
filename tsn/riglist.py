@@ -1,11 +1,8 @@
-from ast import Str
 import json
-from time import sleep
 from pydantic.dataclasses import dataclass
 from pydantic import Field
-from typing import Callable, Iterable, Iterator, List, Tuple
+from typing import Callable, Iterator, List
 from pathlib import Path
-import pyautogui
 from tsn.settings import load_settings
 
 
@@ -78,6 +75,10 @@ class Rigging:
         Set up the rigging.
         """
 
+        # Important to import this here because it depends on a display,
+        # which is not available during unit tests on CICD of other functions.
+        import pyautogui
+
         # Load the settings (allows for dynamic reload)
         settings = load_settings()
 
@@ -85,8 +86,10 @@ class Rigging:
         currentMousePosition = pyautogui.position()
 
         # Activate the artemis window
-        # Because we want to be multi platform, we will do this by looking for the engineering button
-        # and clicking it twice. The first time to activate the window, the second time to focus the engineering console.
+        # Because we want to be multi platform,
+        # we will do this by looking for the engineering button
+        # and clicking it twice. The first time to activate the window,
+        # the second time to focus the engineering console.
         engr = pyautogui.locateOnScreen(
             str(settings.ENGINEERING_BUTTON), confidence=0.5
         )
@@ -140,8 +143,10 @@ class Rigging:
         # If the settings are to return to the vis console, do so
         if return_to_vis():
             # Activate the artemis window
-            # Because we want to be multi platform, we will do this by looking for the vis button
-            # and clicking it twice. The first time to activate the window, the second time to focus the vis console.
+            # Because we want to be multi platform,
+            # we will do this by looking for the vis button
+            # and clicking it twice. The first time to activate the window,
+            # the second time to focus the vis console.
             vis = pyautogui.locateOnScreen(str(settings.VIS_BUTTON), confidence=0.5)
             if vis is None:
                 error_callback("ERROR: Could not find vis button!")
