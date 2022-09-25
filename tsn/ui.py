@@ -1,8 +1,6 @@
 import sys
-from tsn.riglist import Rigging, get_rigging_list
+from tsn.riglist import get_rigging_list
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QCheckBox
-from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import pyqtSlot, Qt
 from tsn.settings import load_settings
 
 
