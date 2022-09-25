@@ -4,6 +4,7 @@ from pydantic.dataclasses import dataclass
 import json
 from pathlib import Path
 
+
 @dataclass
 class Settings:
     WINDOW_DIMENSIONS: Tuple[int, int]
@@ -12,9 +13,12 @@ class Settings:
 
     def __post_init__(self):
         # Derivative settings
-        self.ASSETS_PATH = Path(f'./assets/{self.WINDOW_DIMENSIONS[0]}x{self.WINDOW_DIMENSIONS[1]}')
-        self.ENGINEERING_BUTTON = self.ASSETS_PATH / 'enginr.png'
-        self.VIS_BUTTON = self.ASSETS_PATH / 'vis.png'
+        self.ASSETS_PATH = Path(
+            f"./assets/{self.WINDOW_DIMENSIONS[0]}x{self.WINDOW_DIMENSIONS[1]}"
+        )
+        self.ENGINEERING_BUTTON = self.ASSETS_PATH / "enginr.png"
+        self.VIS_BUTTON = self.ASSETS_PATH / "vis.png"
+
 
 def load_settings():
     """
@@ -22,7 +26,7 @@ def load_settings():
     :return: A dictionary of settings.
     """
 
-    with open('settings.json', 'r') as f:
+    with open("settings.json", "r") as f:
         settings = json.load(f)
 
     if "WINDOW_DIMENSIONS" in settings:
@@ -40,4 +44,8 @@ def load_settings():
     else:
         BUTTON_WIDTH = 400
 
-    return Settings(WINDOW_DIMENSIONS=WINDOW_DIMENSIONS, PRESS_INTERVAL_SEC=PRESS_INTERVAL_SEC, BUTTON_WIDTH=BUTTON_WIDTH)
+    return Settings(
+        WINDOW_DIMENSIONS=WINDOW_DIMENSIONS,
+        PRESS_INTERVAL_SEC=PRESS_INTERVAL_SEC,
+        BUTTON_WIDTH=BUTTON_WIDTH,
+    )
