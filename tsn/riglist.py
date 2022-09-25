@@ -3,7 +3,6 @@ from pydantic.dataclasses import dataclass
 from pydantic import Field
 from typing import Callable, Iterator, List
 from pathlib import Path
-import pyautogui
 from tsn.settings import load_settings
 
 
@@ -75,6 +74,10 @@ class Rigging:
         """
         Set up the rigging.
         """
+
+        # Important to import this here because it depends on a display,
+        # which is not available during unit tests on CICD of other functions.
+        import pyautogui
 
         # Load the settings (allows for dynamic reload)
         settings = load_settings()
